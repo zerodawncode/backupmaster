@@ -1,0 +1,12 @@
+packages:
+  - name: submission
+    environment:
+      RECAPTCHA_KEY_ERPARMOUR: ${RECAPTCHA_KEY_ERPARMOUR}
+      MAILGUN_API_KEY: ${MAILGUN_API_KEY}
+      MAILGUN_DOMAIN: ${MAILGUN_DOMAIN}
+      MAILGUN_DEST_EMAIL: ${MAILGUN_DEST_EMAIL}
+    actions:
+      - name: request
+        runtime: 'python:3.11'
+        limits:
+          timeout: 6000
